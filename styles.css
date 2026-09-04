@@ -484,9 +484,9 @@ button:focus-visible {
 }
 
 .services__list {
-    /* Parallel service layout: 4 cards on desktop, then 2 and 1 column through media queries. */
+    /* Parallel service layout: 3 cards x 2 rows on desktop, then 2 and 1 column through media queries. */
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
 }
 
