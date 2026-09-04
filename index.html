@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Salon Studio | Beauty & Wellness</title>
+    <meta name="description" content="A modern beauty and wellness studio in Kasegoan designed for relaxation, self-care and confidence.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Site Header -->
+    <header class="site-header" aria-label="Primary navigation">
+        <a class="site-header__logo" href="#home" aria-label="Salon Studio home">Salon Studio</a>
+
+        <nav class="site-header__nav" aria-label="Main menu">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="site-header__book" href="#booking">
+            Book
+            <span aria-hidden="true">↗</span>
+        </a>
+
+        <button class="site-header__menu" type="button" aria-label="Open menu">
+            Menu
+        </button>
+    </header>
+
+    <main>
+        <!-- Step 2: Hero Section -->
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="hero__media">
+                <img
+                    class="hero__image"
+                    src="assets/images/hero.webp"
+                    alt="Salon Studio spa and beauty studio interior"
+                    fetchpriority="high"
+                    decoding="async"
+                >
+            </div>
+
+            <div class="hero__overlay" aria-hidden="true"></div>
+
+            <div class="hero__content">
+                <p class="hero__eyebrow">Beauty • Wellness • Self Care</p>
+
+                <h1 id="hero-title" class="hero__title">
+                    Your Time.<br>
+                    Your Escape.
+                </h1>
+
+                <p class="hero__description">
+                    A modern beauty and wellness studio in Kasegoan designed for relaxation,
+                    self-care and confidence.
+                </p>
+
+                <div class="hero__actions">
+                    <a href="#booking" class="hero__cta hero__cta--primary">
+                        Book Appointment
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a
+                        href="https://wa.me/XXXXXXXXXXXX"
+                        class="hero__cta hero__cta--secondary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        WhatsApp Us
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero__meta">
+                <span class="hero__location">Kasegoan, Maharashtra</span>
+                <span class="hero__availability">Open Today · 10:00 - 22:00</span>
+            </div>
+
+            <a href="#about" class="hero__scroll" aria-label="Scroll to discover more">
+                <span>Scroll to Discover</span>
+                <span aria-hidden="true">↓</span>
+            </a>
+        </section>
+
+        <!-- Step 3: Intro / Brand Story Section -->
+        <section class="intro" id="about" aria-labelledby="intro-title">
+            <div class="intro__container">
+                <div class="intro__content">
+                    <p class="intro__eyebrow">The Art of Self-Care</p>
+
+                    <h2 id="intro-title" class="intro__title">
+                        A space designed<br>
+                        around you.
+                    </h2>
+
+                    <div class="intro__body">
+                        <p class="intro__lead">
+                            More than a salon, we create an environment where beauty,
+                            wellness and personal time come together.
+                        </p>
+
+                        <p class="intro__text">
+                            Every detail of the experience is considered, from the atmosphere
+                            and products we use to the way our team cares for every guest.
+                        </p>
+                    </div>
+
+                    <a href="about.html" class="intro__link">
+                        Discover Our Story
+                        <span aria-hidden="true">&nearr;</span>
+                    </a>
+                </div>
+
+                <div class="intro__media">
+                    <figure class="intro__figure">
+                        <img
+                            class="intro__image"
+                            src="assets/images/about.webp"
+                            alt="Salon Studio beauty studio interior"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </figure>
+
+                    <p class="intro__caption">A considered space for your time.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 4: Services / Treatment Menu Section -->
+        <section class="services" id="services" aria-labelledby="services-title">
+            <div class="services__container">
+                <header class="services__header">
+                    <div class="services__heading-group">
+                        <p class="services__eyebrow">Our Services</p>
+
+                        <h2 id="services-title" class="services__title">
+                            Designed around<br>
+                            how you want to feel.
+                        </h2>
+                    </div>
+
+                    <p class="services__intro">
+                        Thoughtfully selected beauty and wellness treatments designed to help
+                        you look good, feel better and make time for yourself.
+                    </p>
+                </header>
+
+                <!-- Services are grouped in a parallel grid so visitors can compare options quickly. -->
+                <div class="services__list" role="list">
+                    <article class="service" role="listitem">
+                        <span class="service__number" aria-hidden="true">01</span>
+
+                        <figure class="service__media">
+                            <img
+                                class="service__image"
+                                src="assets/services/service1.webp"
+                                alt="Hair styling service at Salon Studio"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </figure>
+
+                        <div class="service__content">
+                            <h3 class="service__title">Hair &amp; Styling</h3>
+                            <p class="service__description">
+                                Cuts, styling and carefully selected hair treatments.
+                            </p>
+                        </div>
+
+                        <div class="service__meta">
+                            <span class="service__price">From &#8377;____</span>
+                            <a href="#booking" class="service__link" aria-label="Book Hair and Styling">
+                                <span>Book</span>
+                                <span aria-hidden="true">&nearr;</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service" role="listitem">
+                        <span class="service__number" aria-hidden="true">02</span>
+
+                        <figure class="service__media">
+                            <img
+                                class="service__image"
+                                src="assets/services/service2.webp"
+                                alt="Skin and facial treatment at Salon Studio"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </figure>
+
+                        <div class="service__content">
+                            <h3 class="service__title">Skin &amp; Facials</h3>
+                            <p class="service__description">
+                                Restorative facial treatments tailored to your skin.
+                            </p>
+                        </div>
+
+                        <div class="service__meta">
+                            <span class="service__price">From &#8377;____</span>
+                            <a href="#booking" class="service__link" aria-label="Book Skin and Facial treatment">
+                                <span>Book</span>
+                                <span aria-hidden="true">&nearr;</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service" role="listitem">
+                        <span class="service__number" aria-hidden="true">03</span>
+
+                        <figure class="service__media">
+                            <img
+                                class="service__image"
+                                src="assets/services/service3.webp"
+                                alt="Spa and massage treatment at Salon Studio"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </figure>
+
+                        <div class="service__content">
+                            <h3 class="service__title">Spa &amp; Massage</h3>
+                            <p class="service__description">
+                                Slow down, reset and reconnect with yourself.
+                            </p>
+                        </div>
+
+                        <div class="service__meta">
+                            <span class="service__price">From &#8377;____</span>
+                            <a href="#booking" class="service__link" aria-label="Book Spa and Massage">
+                                <span>Book</span>
+                                <span aria-hidden="true">&nearr;</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="service" role="listitem">
+                        <span class="service__number" aria-hidden="true">04</span>
+
+                        <figure class="service__media">
+                            <img
+                                class="service__image"
+                                src="assets/services/service4.webp"
+                                alt="Nail care service at Salon Studio"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </figure>
+
+                        <div class="service__content">
+                            <h3 class="service__title">Nail Care</h3>
+                            <p class="service__description">
+                                Manicure, pedicure and finishing treatments.
+                            </p>
+                        </div>
+
+                        <div class="service__meta">
+                            <span class="service__price">From &#8377;____</span>
+                            <a href="#booking" class="service__link" aria-label="Book Nail Care">
+                                <span>Book</span>
+                                <span aria-hidden="true">&nearr;</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="services__footer">
+                    <a href="services.html" class="services__all-link">
+                        View All Services
+                        <span aria-hidden="true">&nearr;</span>
+                    </a>
+                </div>
+        </section>
+
+        <!-- Step 5: Experience / Why Us Section -->
+        <section class="experience" id="experience" aria-labelledby="experience-title">
+            <div class="experience__container">
+                <div class="experience__media fade-reveal">
+                    <figure class="experience__figure">
+                        <img
+                            class="experience__image"
+                            src="assets/images/experience.jpg"
+                            alt="Salon Studio warm, minimalist interior and treatment environment"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </figure>
+                    <span class="experience__image-label" aria-hidden="true">THE STUDIO</span>
+                </div>
+
+                <div class="experience__content fade-reveal">
+                    <p class="experience__eyebrow">THE EXPERIENCE</p>
+                    <h2 id="experience-title" class="experience__title">
+                        Beauty is only part<br>of the experience.
+                    </h2>
+                    <p class="experience__intro">
+                        We believe the way you feel during your visit matters just as much as the result you leave with.
+                    </p>
+
+                    <div class="experience__principles" role="list">
+                        <article class="experience__principle" role="listitem">
+                            <span class="experience__number" aria-hidden="true">01</span>
+                            <div>
+                                <h3 class="experience__principle-title">Personal</h3>
+                                <p class="experience__principle-text">
+                                    Your visit begins with understanding what you actually want.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="experience__principle" role="listitem">
+                            <span class="experience__number" aria-hidden="true">02</span>
+                            <div>
+                                <h3 class="experience__principle-title">Considered</h3>
+                                <p class="experience__principle-text">
+                                    Every treatment and detail is chosen with intention.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="experience__principle" role="listitem">
+                            <span class="experience__number" aria-hidden="true">03</span>
+                            <div>
+                                <h3 class="experience__principle-title">Unrushed</h3>
+                                <p class="experience__principle-text">
+                                    A moment to slow down and make time for yourself.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <a href="#booking" class="experience__link">
+                        <span>Experience The Studio</span>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+        </section>
+
+        <!-- Step 6: Signature Experience / Featured Treatment Section -->
+        <section class="signature" id="signature" aria-labelledby="signature-title">
+            <div class="signature__container">
+                <p class="signature__eyebrow">SIGNATURE EXPERIENCE</p>
+
+                <div class="signature__layout">
+                    <div class="signature__media fade-reveal">
+                        <figure class="signature__figure">
+                            <img
+                                class="signature__image"
+                                src="assets/images/signature.jpg"
+                                alt="[Treatment Name] signature experience at Salon Studio"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </figure>
+                        <p class="signature__caption" aria-hidden="true">THE SIGNATURE EXPERIENCE</p>
+                    </div>
+
+                    <div class="signature__content fade-reveal">
+                        <p class="signature__category">FEATURED TREATMENT</p>
+                        <h2 id="signature-title" class="signature__title">
+                            [Treatment Name]
+                        </h2>
+                        <p class="signature__description">
+                            [Short description of the featured treatment or experience.]
+                        </p>
+
+                        <div class="signature__details">
+                            <div class="signature__detail">
+                                <span class="signature__detail-label">Duration</span>
+                                <span class="signature__detail-value">[Duration]</span>
+                            </div>
+
+                            <div class="signature__detail">
+                                <span class="signature__detail-label">Price</span>
+                                <span class="signature__detail-value">[Price]</span>
+                            </div>
+                        </div>
+
+                        <a href="#booking" class="signature__link">
+                            <span>Book This Experience</span>
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Step 7: Gallery / Visual Showcase Section -->
+        <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+            <div class="gallery__container">
+                <header class="gallery__header">
+                    <div class="fade-reveal">
+                        <p class="gallery__eyebrow">OUR WORLD</p>
+                        <h2 id="gallery-title" class="gallery__title">
+                            A glimpse inside<br>the studio.
+                        </h2>
+                    </div>
+                    <p class="gallery__intro fade-reveal">
+                        A closer look at the space, details and moments that make the experience.
+                    </p>
+                </header>
+
+                <div class="gallery__grid" role="list">
+                    <figure class="gallery__item gallery__item--01 fade-reveal" role="listitem">
+                        <img
+                            src="assets/gallery/gallery1.webp"
+                            alt="Bright modern salon interior showing aesthetic styling chairs, mirrors, and minimalist design"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </figure>
+
+                    <figure class="gallery__item gallery__item--02 fade-reveal" role="listitem">
+                        <img
+                            src="assets/gallery/gallery2.webp"
+                            alt="Professional hair stylist carefully styling a client's hair with attention to detail"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </figure>
+
+                    <figure class="gallery__item gallery__item--03 fade-reveal" role="listitem">
+                        <img
+                            src="assets/gallery/gallery3.webp"
+                            alt="Relaxing facial and skincare treatment room featuring warm editorial ambient lighting"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </figure>
+                </div>
+
+                <div class="gallery__footer fade-reveal">
+                    <a href="#gallery" class="gallery__link">
+                        <span>Follow Our World</span>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+        </section>
+
+        <!-- Step 8: Trust / Quality Section -->
+        <section class="trust" id="trust" aria-labelledby="trust-title">
+            <div class="trust__container">
+                <header class="trust__header">
+                    <div class="fade-reveal">
+                        <p class="trust__eyebrow">THE DETAILS MATTER</p>
+                        <h2 id="trust-title" class="trust__title">
+                            A considered experience,<br>from beginning to end.
+                        </h2>
+                    </div>
+                    <p class="trust__intro fade-reveal">
+                        The little details shape how a visit feels. From the first conversation to the final result, every part of the experience should feel intentional.
+                    </p>
+                </header>
+
+                <div class="trust__principles" role="list">
+                    <article class="trust__principle fade-reveal" role="listitem">
+                        <span class="trust__number" aria-hidden="true">01</span>
+                        <div class="trust__principle-content">
+                            <h3 class="trust__principle-title">Personal Attention</h3>
+                            <p class="trust__principle-text">
+                                We take the time to understand what you want before the experience begins.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="trust__principle fade-reveal" role="listitem">
+                        <span class="trust__number" aria-hidden="true">02</span>
+                        <div class="trust__principle-content">
+                            <h3 class="trust__principle-title">Considered Service</h3>
+                            <p class="trust__principle-text">
+                                Every part of the visit is approached with care and attention to detail.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="trust__principle fade-reveal" role="listitem">
+                        <span class="trust__number" aria-hidden="true">03</span>
+                        <div class="trust__principle-content">
+                            <h3 class="trust__principle-title">An Unrushed Moment</h3>
+                            <p class="trust__principle-text">
+                                A space designed to help you slow down, switch off and enjoy the experience.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 9: Booking CTA / Conversion Section -->
+        <section class="booking-cta" id="booking" aria-labelledby="booking-title">
+            <div class="booking-cta__container">
+                <div class="booking-cta__content">
+                    <p class="booking-cta__eyebrow fade-reveal">
+                        YOUR TIME
+                    </p>
+
+                    <h2 id="booking-title" class="booking-cta__title fade-reveal">
+                        Your time.<br>
+                        Your moment.
+                    </h2>
+
+                    <p class="booking-cta__intro fade-reveal">
+                        Make space for yourself.
+                    </p>
+
+                    <div class="booking-cta__actions fade-reveal">
+                        <a
+                            class="booking-cta__primary"
+                            href="#booking"
+                            data-cta="booking"
+                            aria-label="Book an appointment"
+                        >
+                            <span>Book an Appointment</span>
+                            <span aria-hidden="true">↗</span>
+                        </a>
+
+                        <p class="booking-cta__secondary">
+                            Prefer to talk first?
+                            <a
+                                href="https://wa.me/XXXXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment.%20Could%20you%20please%20share%20the%20available%20dates%20and%20times%3F"
+                                data-cta="whatsapp-booking"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                WhatsApp us
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 10: Contact + Location Section -->
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <div class="contact__container">
+                <header class="contact__header fade-reveal">
+                    <p class="contact__eyebrow">
+                        COME BY
+                    </p>
+                    <h2 id="contact-title" class="contact__title">
+                        We'd love to see you.
+                    </h2>
+                </header>
+
+                <div class="contact__location">
+                    <div class="contact__map fade-reveal">
+                        <div class="contact__map-placeholder">
+                            MAP LOCATION
+                        </div>
+                    </div>
+
+                    <div class="contact__details fade-reveal">
+                        <div class="contact__detail-group">
+                            <p class="contact__label">
+                                THE STUDIO
+                            </p>
+                            <address class="contact__address">
+                                [REAL SALON ADDRESS]
+                            </address>
+                        </div>
+
+                        <div class="contact__detail-group">
+                            <p class="contact__label">
+                                OPENING HOURS
+                            </p>
+                            <ul class="contact__hours">
+                                <li>
+                                    <span>Monday — Saturday</span>
+                                    <span>[HOURS]</span>
+                                </li>
+                                <li>
+                                    <span>Sunday</span>
+                                    <span>[HOURS]</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="contact__detail-group">
+                            <p class="contact__label">
+                                CONTACT
+                            </p>
+                            <div class="contact__links">
+                                <a href="tel:[PHONE]" class="contact__link">
+                                    [PHONE NUMBER]
+                                </a>
+                                <a href="[WHATSAPP_URL]" class="contact__link" target="_blank" rel="noopener noreferrer">
+                                    WhatsApp us ↗
+                                </a>
+                            </div>
+                        </div>
+
+                        <a href="[GOOGLE_MAPS_URL]" class="contact__directions" target="_blank" rel="noopener noreferrer">
+                            <span>Get Directions</span>
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Step 11: Footer Section -->
+    <footer class="site-footer">
+        <div class="site-footer__container">
+            <div class="site-footer__main">
+                <div class="site-footer__brand">
+                    <a href="/" class="site-footer__logo" aria-label="Salon Studio home">
+                        Salon Studio
+                    </a>
+                    <p class="site-footer__tagline">
+                        Beauty, care & your moment.
+                    </p>
+                </div>
+
+                <nav class="site-footer__nav" aria-label="Footer navigation">
+                    <div class="site-footer__nav-group">
+                        <p class="site-footer__label">EXPLORE</p>
+                        <a href="#about">About</a>
+                        <a href="#services">Services</a>
+                        <a href="#gallery">Gallery</a>
+                    </div>
+
+                    <div class="site-footer__nav-group">
+                        <p class="site-footer__label">VISIT</p>
+                        <a href="#contact">Location</a>
+                        <a href="#contact">Opening Hours</a>
+                        <a href="#contact">Directions</a>
+                    </div>
+
+                    <div class="site-footer__nav-group">
+                        <p class="site-footer__label">CONNECT</p>
+                        <a href="#gallery">Instagram</a>
+                        <a href="#contact">WhatsApp</a>
+                        <a href="#contact">Phone</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="site-footer__bottom">
+                <p class="site-footer__copyright">
+                    © 2026 Salon Studio. All rights reserved.
+                </p>
+                <div class="site-footer__legal">
+                    <a href="#contact">Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Reveal Observer and Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const menuBtn = document.querySelector('.site-header__menu');
+            const header = document.querySelector('.site-header');
+            
+            if (menuBtn && header) {
+                menuBtn.addEventListener('click', () => {
+                    const isOpen = header.classList.toggle('nav-open');
+                    menuBtn.setAttribute('aria-expanded', isOpen);
+                    menuBtn.textContent = isOpen ? 'Close' : 'Menu';
+                    document.body.style.overflow = isOpen ? 'hidden' : '';
+                });
+
+                // Close menu when clicking a link
+                header.querySelectorAll('.site-header__nav a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        header.classList.remove('nav-open');
+                        menuBtn.setAttribute('aria-expanded', 'false');
+                        menuBtn.textContent = 'Menu';
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+
+            // Scroll Reveal IntersectionObserver
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            document.querySelectorAll('.fade-reveal').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
