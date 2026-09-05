@@ -57,8 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
 function initMobileMenu() {
     const menuBtn = document.querySelector('.site-header__menu');
     const header = document.querySelector('.site-header');
+    const overlay = document.querySelector('.site-header__overlay');
 
     if (!menuBtn || !header) return;
+
+    function closeMenu() {
+        header.classList.remove('nav-open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = 'Menu';
+        document.body.style.overflow = '';
+    }
 
     menuBtn.addEventListener('click', () => {
         const isOpen = header.classList.toggle('nav-open');
@@ -67,13 +75,18 @@ function initMobileMenu() {
         document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
+    if (overlay) {
+        overlay.addEventListener('click', closeMenu);
+    }
+
     header.querySelectorAll('.site-header__nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            header.classList.remove('nav-open');
-            menuBtn.setAttribute('aria-expanded', 'false');
-            menuBtn.textContent = 'Menu';
-            document.body.style.overflow = '';
-        });
+        link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && header.classList.contains('nav-open')) {
+            closeMenu();
+        }
     });
 }
 
