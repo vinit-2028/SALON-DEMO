@@ -21,6 +21,19 @@ html, body {
     overflow-x: hidden;
 }
 
+html.is-scroll-locked,
+body.is-scroll-locked {
+    overflow: hidden !important;
+    height: 100% !important;
+}
+
+body.is-scroll-locked {
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+}
+
 img, video, iframe {
     max-width: 100%;
 }
@@ -2516,6 +2529,8 @@ button:focus-visible {
     width: min(560px, 100%);
     max-height: min(720px, 90vh);
     overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
     background: var(--color-ink);
     color: var(--color-paper);
     border: 1px solid var(--color-surface-line);

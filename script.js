@@ -52,6 +52,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ---------------------------------------------------------
+   Helper: Body Scroll Locking for Modals & Mobile Menu
+--------------------------------------------------------- */
+let scrollLockCount = 0;
+let scrollPosition = 0;
+
+function lockScroll() {
+    scrollLockCount++;
+    if (scrollLockCount === 1) {
+        scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        document.documentElement.classList.add('is-scroll-locked');
+        document.body.classList.add('is-scroll-locked');
+        document.body.style.top = `-${scrollPosition}px`;
+    }
+}
+
+function unlockScroll() {
+    scrollLockCount = Math.max(0, scrollLockCount - 1);
+    if (scrollLockCount === 0) {
+        document.documentElement.classList.remove('is-scroll-locked');
+        document.body.classList.remove('is-scroll-locked');
+        document.body.style.top = '';
+        window.scrollTo(0, scrollPosition);
+    }
+}
+
+/* ---------------------------------------------------------
    1. Mobile Menu Toggle
 --------------------------------------------------------- */
 function initMobileMenu() {
@@ -67,7 +93,7 @@ function initMobileMenu() {
         document.body.classList.remove('nav-open');
         menuBtn.setAttribute('aria-expanded', 'false');
         menuBtn.textContent = 'Menu';
-        document.body.style.overflow = '';
+        unlockScroll();
     }
 
     function openMenu() {
@@ -75,7 +101,7 @@ function initMobileMenu() {
         document.body.classList.add('nav-open');
         menuBtn.setAttribute('aria-expanded', 'true');
         menuBtn.textContent = 'Close';
-        document.body.style.overflow = 'hidden';
+        lockScroll();
     }
 
     menuBtn.addEventListener('click', (e) => {
@@ -89,6 +115,9 @@ function initMobileMenu() {
 
     if (overlay) {
         overlay.addEventListener('click', closeMenu);
+        overlay.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+        }, { passive: false });
     }
 
     document.addEventListener('click', (e) => {
@@ -167,7 +196,7 @@ function initBookingModal() {
     function openModal() {
         modal.classList.add('is-open');
         modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
+        lockScroll();
 
         // Focus the first empty required field, or the close button
         const firstField = serviceSelect.value
@@ -181,7 +210,7 @@ function initBookingModal() {
     function closeModal() {
         modal.classList.remove('is-open');
         modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
+        unlockScroll();
         document.removeEventListener('keydown', onModalKeydown);
 
         if (lastFocusedTrigger) lastFocusedTrigger.focus();
@@ -192,6 +221,13 @@ function initBookingModal() {
             successPanel.hidden = true;
         }, 250);
     }
+
+    // Prevent touch dragging on modal backdrop from scrolling background page
+    modal.addEventListener('touchmove', (e) => {
+        if (e.target === modal || e.target.classList.contains('booking-modal__backdrop')) {
+            e.preventDefault();
+        }
+    }, { passive: false });
 
     function resetBookingForm() {
         form.reset();
@@ -393,7 +429,7 @@ function initGalleryLightbox() {
         render();
         lightbox.classList.add('is-open');
         lightbox.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
+        lockScroll();
         document.addEventListener('keydown', onKeydown);
         setTimeout(() => lightbox.querySelector('[data-lightbox-close]').focus(), 50);
     }
@@ -401,10 +437,16 @@ function initGalleryLightbox() {
     function close() {
         lightbox.classList.remove('is-open');
         lightbox.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
+        unlockScroll();
         document.removeEventListener('keydown', onKeydown);
         if (lastFocusedTrigger) lastFocusedTrigger.focus();
     }
+
+    lightbox.addEventListener('touchmove', (e) => {
+        if (e.target === lightbox || e.target.classList.contains('lightbox__backdrop')) {
+            e.preventDefault();
+        }
+    }, { passive: false });
 
     function render() {
         const img = images[currentIndex];
